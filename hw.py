@@ -35,8 +35,8 @@ def encode_leaders(leader):
 def decode_leaders(dct):
   return leaders(dct["name"],dct["age"],dct["country"],dct["age"])
 leaders_list= read()
-# with open("leaders.json","w") as file:
-#    json.dump(leaders_list,file,default=encode_leaders)
+with open("leaders.json","w") as file:
+   json.dump(leaders_list,file,default=encode_leaders)
 with open("leaders.json","r") as file:
  s = file.readline()
  s = json.loads(s,object_hook=decode_leaders)
