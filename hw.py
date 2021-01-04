@@ -33,7 +33,7 @@ def encode_leaders(leader):
     else:
        return f"{type(leader)} is not an leaders object"
 def decode_leaders(dct):
-  return leaders(dct["name"],dct["age"],dct["country"],dct["age"])
+  return leaders(dct["name"],dct["age"],dct["country"],dct["continent"])
 leaders_list= read()
 with open("leaders.json","w") as file:
    json.dump(leaders_list,file,default=encode_leaders)
